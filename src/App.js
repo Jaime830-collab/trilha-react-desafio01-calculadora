@@ -35,6 +35,20 @@ const App = () => {
 
   }
 
+  const handleMultplyNumbers = () => {
+
+    if(firstNumber === '0'){
+        setFirstNumber(String(currentNumber));
+        setCurrentNumber('0')
+        setOperation('-')
+    }else {
+      const sum = Number(firstNumber) * Number(currentNumber);
+      setCurrentNumber(String(sum))
+      setOperation('')
+    }
+
+  }
+
   const handleMinusNumbers = () => {
 
     if(firstNumber === '0'){
@@ -43,6 +57,20 @@ const App = () => {
         setOperation('-')
     }else {
       const sum = Number(firstNumber) - Number(currentNumber);
+      setCurrentNumber(String(sum))
+      setOperation('')
+    }
+
+  }
+
+  const handleDivideNumbers = () => {
+
+    if(firstNumber === '0'){
+        setFirstNumber(String(currentNumber));
+        setCurrentNumber('0')
+        setOperation('-')
+    }else {
+      const sum = Number(firstNumber) / Number(currentNumber);
       setCurrentNumber(String(sum))
       setOperation('')
     }
